@@ -21,6 +21,21 @@ class pizza{
     price(){
       return sizeCost + toppingCost[0] + toppingCost[1];
     }
+    addTopping(toptype, newtop){
+      if(toptype  == 'meat'){
+        this.meatToppings.push(newtop);
+      if(topype == 'veggie'){
+        this.veggieToppings.push(newtop);
+      }
+      removeTopping(toptype, newtop){
+        if(toptype  == 'meat'){
+          this.meatToppings.pop(newtop);
+        if(topype == 'veggie'){
+          this.veggieToppings.pop(newtop);
+        }
+    }
+  }
+
     static promotionalDeal(pizza,percent){
       return  pizza.price()*(1-(percent/100));
     }
